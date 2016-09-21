@@ -33,4 +33,4 @@ Wraps a `Enumerable` into a container with a `Next` method.
 ### EditorUtils
 
 - `CreateReorderableList` helps to draw a reorderable list with the correct spacing. See example for usage.
-- `MinMaxSliderAttribute` and `MinMaxSliderDrawer` provide range sliders for `Vector2`s.
+- `MinMaxSliderAttribute` and `MinMaxSliderDrawer` provide range sliders for `Vector2`.
