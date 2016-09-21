@@ -9,7 +9,7 @@ Inherit from `Singleton` to make the sub class a singleton.
 
 ### Cycle
 
-Wraps a List into a container with a `Next` method.
+Wraps a `Enumerable` into a container with a `Next` method.
 
 ### BitmaskHelper
 
