@@ -5,7 +5,7 @@ Code Library for Unity 3D
 
 ### Singleton
 
-Inherit from `BowieCode.Singleton` to make the sub class a singleton.
+Inherit from `Singleton` to make the sub class a singleton.
 
 ### Cycle
 
