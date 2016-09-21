@@ -13,7 +13,7 @@ namespace BowieCode {
 	    }
 	
 	    void Update () {
-	        _text.text = string.Format( "{0}\n{1:0.000} of today, {2:0.000} of year", BowieTime.NowStr(), BowieTime.TimeOfDay(), BowieTime.TimeOfYear() );
+			_text.text = string.Format( "{0}\n{1:0.000} of today, {2:0.000} of year", BowieTime.NowStr(), BowieTime.PercentOfDay(), BowieTime.PercentOfYear() );
 	    }
     }
 
