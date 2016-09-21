@@ -45,7 +45,7 @@ namespace BowieCode {
 
             _lastCameraNearPlane = targetCamera.nearClipPlane;
             _lastCameraFarPlane = targetCamera.farClipPlane;
-            _lastCameraNearPlane = distanceFrom;
+			_lastDistanceFrom = distanceFrom;
             _lastBindMode = bindMode;
         }
 
