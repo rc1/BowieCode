@@ -1,4 +1,5 @@
 ﻿using System;
+using UnityEngine;
 
 namespace BowieCode {
 
@@ -33,11 +34,7 @@ namespace BowieCode {
 		///Returns the time of day where 0.5f is noon.
 		///</summary>
 		public static float PercentOfDay ( DateTime dateTime ) {
-			DateTime currentDay = new DateTime( dateTime.Year, dateTime.Month, dateTime.Day, 0, 0, 0 );
-			DateTime nextDay = new DateTime( dateTime.Year, dateTime.Month, dateTime.Day, 23, 59, 59 );
-			TimeSpan aDay = nextDay - currentDay;
-			TimeSpan soFar = dateTime - currentDay;
-			return (float) ( soFar.TotalMilliseconds / aDay.TotalMilliseconds );
+			return (float) ( dateTime.TimeOfDay.Hours / 24.0 );
 		}
 
 		///<summary>
