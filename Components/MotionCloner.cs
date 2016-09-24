@@ -3,7 +3,7 @@
 namespace BowieCode {
 
     /// <summary>
-    /// Copys a master transforms position, rotation and scale to components transform. Provides options for using local or world space, and retaining offsets.
+    /// Applies a master transforms position, rotation and scale to components transform. Provides options for using local or world space, and retaining offsets.
     /// </summary>
     public class MotionCloner : MonoBehaviour {
 
