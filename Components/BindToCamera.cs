@@ -42,7 +42,6 @@ namespace BowieCode {
             else if ( bindMode == BindMode.Near ) {
                 MoveToCameraNear();
             }
-
             _lastCameraNearPlane = targetCamera.nearClipPlane;
             _lastCameraFarPlane = targetCamera.farClipPlane;
 			_lastDistanceFrom = distanceFrom;
