@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
-using UnityEditor;
-using UnityEditorInternal;
 using System;
 
 #if UNITY_EDITOR
+using UnityEditor;
+using UnityEditorInternal;
 
 namespace BowieCode {
 
