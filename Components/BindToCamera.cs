@@ -2,10 +2,11 @@
 
 namespace BowieCode {
 
-    [ExecuteInEditMode]
     /// <summary>
     /// Binds transform's z valie to near or far to a target camera's with a slight distance from. Components GameObject should be a child of the camera.
-    /// </summary>
+	/// </summary>
+	[AddComponentMenu("BowieCode/Bind To Camera")]
+	[ExecuteInEditMode]
     public class BindToCamera : MonoBehaviour {
 
         public enum BindMode {

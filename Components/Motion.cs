@@ -4,18 +4,33 @@ using System.Collections.Generic;
 namespace BowieCode {
 
     /// <summary>
-    /// Apply sine based motions to the transform component
-    /// </summary>
-    public class SineMotion : MonoBehaviour {
+    /// Apply sine, cos or tan based motions to the transform component
+	/// </summary>
+	[AddComponentMenu("BowieCode/Motion")]
+    public class Motion : MonoBehaviour {
+
+		public enum MotionType {
+			Sine,
+			Cos,
+			Tan
+		}
 
         [System.Serializable]
         public class SineMotionParam {
+			public MotionType type = MotionType.Sine;
             public bool isEnabled = false;
             public float amplitude = 1.0f;
             public float cyclesPerSecond = 1.0f;
             public float offset = 0.0f;
             public float GetValue ( float time ) {
-                return BowieMath.SineF(  time + offset, amplitude, cyclesPerSecond );
+				if ( type == MotionType.Sine ) {
+					return BowieMath.SineF(  time + offset, amplitude, cyclesPerSecond );
+				} else if ( type == MotionType.Tan ) {
+					return BowieMath.TanF(  time + offset, amplitude, cyclesPerSecond );
+				} else if ( type == MotionType.Cos ) {
+					return BowieMath.SineF(  time + offset, amplitude, cyclesPerSecond );
+				}
+				return 0;
             }
         }
 

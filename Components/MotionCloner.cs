@@ -5,6 +5,7 @@ namespace BowieCode {
     /// <summary>
     /// Applies a master transforms position, rotation and scale to components transform. Provides options for using local or world space, and retaining offsets.
     /// </summary>
+	[AddComponentMenu("BowieCode/Motion Cloner")]
     public class MotionCloner : MonoBehaviour {
 
         public enum CoordinateSpace {

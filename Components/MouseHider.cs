@@ -4,7 +4,8 @@ namespace BowieCode {
 
     /// <summary>
     /// Hides the mouse after a set number of seconds
-    /// </summary>
+	/// </summary>
+	[AddComponentMenu("BowieCode/Mouse Hider")]
     public class MouseHider : MonoBehaviour {
 
         private Vector3 _lastMousePosition;

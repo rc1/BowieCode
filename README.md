@@ -27,7 +27,7 @@ Wraps a `Enumerable` into a container with a `Next` method.
 - `CameraFulstrumGizmo` alway shows the camera's fulstrum in the scene view even if the camera is not selected.
 - `MotionCloner` applies a master transforms position, rotation and scale to components transform. Provides options for using local or world space, and retaining offsets.
 - `MouseHider` hides the mouse after a set number of seconds.
-- `SinMotion` applies sine based motions to selectable varibles of the transform component.
+- `Motion` applies trig based motions to selectable varibles of the transform component.
 - `TextGizo` always displays text in the scene view.
 
 ### EditorUtils

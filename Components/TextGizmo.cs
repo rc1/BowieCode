@@ -8,7 +8,8 @@ namespace BowieCode {
 
     /// <summary>
     /// Displays the gameobject's name or other text in the Scene View
-    /// </summary>
+	/// </summary>
+	[AddComponentMenu("BowieCode/Text Gizmo")]
     public class TextGizmo : MonoBehaviour {
 
         public bool useGameObjectName = true;

@@ -1,9 +1,11 @@
 ﻿using UnityEngine;
 
 namespace BowieCode {
+	
     /// <summary>
     /// Keeps the fulstrum of the camera visible in the scene view.
     /// </summary>
+	[AddComponentMenu("BowieCode/Camera Fulstrum Gizmo")]
     [RequireComponent( typeof( Camera ) )]
     public class CameraFulstrumGizmo : MonoBehaviour {
 

@@ -31,10 +31,14 @@ namespace BowieCode {
 		}
 
 		///<summary>
-		///Returns the time of day where 0.5f is noon.
+		///Returns the time of day where 0.5f is noon. Accounts for leap seconds :) compared to dateTime.TimeOfDay I think. 
 		///</summary>
 		public static float PercentOfDay ( DateTime dateTime ) {
-			return (float) ( dateTime.TimeOfDay.Hours / 24.0 );
+			DateTime currentDay = new DateTime( dateTime.Year, dateTime.Month, dateTime.Day, 0, 0, 0 );
+			DateTime nextDay = new DateTime( dateTime.Year, dateTime.Month, dateTime.Day, 23, 59, 59 );
+			TimeSpan aDay = nextDay - currentDay;
+			TimeSpan soFar = dateTime - currentDay;
+			return (float) ( soFar.TotalMilliseconds / aDay.TotalMilliseconds );
 		}
 
 		///<summary>
