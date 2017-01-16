@@ -47,13 +47,11 @@ namespace BowieCode {
 				for ( int y = 0; y < gridSettings.count.y; y++ ) {
 					for ( int z = 0; z < gridSettings.count.z; z++ ) {;
 						GameObject clone;
-						if ( Application.isEditor ) {
 #if UNITY_EDITOR
-							clone = PrefabUtility.InstantiatePrefab( prefab ) as GameObject;
+						clone = PrefabUtility.InstantiatePrefab( prefab ) as GameObject;
+#else
+						clone = Instantiate( prefab );
 #endif
-						} else {
-							clone = Instantiate( prefab );
-						}
 						clone.transform.parent = container;
 						clone.transform.position = anchor + new Vector3( x * gridSettings.spacing, y * gridSettings.spacing, z * gridSettings.spacing );
 					}
