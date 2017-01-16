@@ -9,12 +9,12 @@ namespace BowieCode {
 	public class GridRepeaterEditor : Editor {
 
 		public override void OnInspectorGUI() {
-			GridRepeater target = (GridRepeater)target;
+			GridRepeater gridRepeater = (GridRepeater)target;
 
 			DrawDefaultInspector ();
 
 			if ( GUILayout.Button( "Generate" ) ) {
-				target.DoGenerateGrid();
+				gridRepeater.DoGenerateGrid();
 			}
 
 		}
