@@ -29,6 +29,8 @@ Wraps a `Enumerable` into a container with a `Next` method.
 - `MouseHider` hides the mouse after a set number of seconds.
 - `Motion` applies trig based motions to selectable varibles of the transform component.
 - `TextGizo` always displays text in the scene view.
+- `RandomScale` applies a random scale to all or individual axises.
+- `RandomOffset` applies a random position offset to to all or individual axises.
 
 ### EditorUtils
 
