@@ -36,3 +36,8 @@ Wraps a `Enumerable` into a container with a `Next` method.
 
 - `CreateReorderableList` helps to draw a reorderable list with the correct spacing. See example for usage.
 - `MinMaxSliderAttribute` and `MinMaxSliderDrawer` provide range sliders for `Vector2`.
+
+### Utils
+
+- `SceneRecorder` an OSX screen recorder which leverages ffmpeg installed by Homebrew.
+
