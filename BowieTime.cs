@@ -68,6 +68,22 @@ namespace BowieCode {
 			return (float)(soFar.TotalMinutes / aYear.TotalMinutes);
 		}
 
+		/// <summary>
+		/// Gets the day as a string. E.g. 20170213
+		/// </summary>
+		/// <returns>The day.</returns>
+		public static string GetDayString () {
+			return DateTime.Now.ToString("yyyyMMdd");
+		}
+
+		/// <summary>
+		/// Gets the time as a string. E.g. 1314
+		/// </summary>
+		/// <returns>The time string.</returns>
+		public static string GetTimeString () {
+			return DateTime.Now.ToString("HHmm");
+		}
+
 	}
 
 }
