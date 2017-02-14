@@ -1,6 +1,8 @@
 # BowieCode
 Personal Code/Snippet Library for Unity 3D
 
+![david-bowie-2015-04-24t16-49-11-1](https://cloud.githubusercontent.com/assets/166915/22928405/3921cc9a-f2ae-11e6-8553-5deb69ab7073.png)
+
 ## Features
 
 ### BowieMath
