@@ -28,7 +28,7 @@ Personal Code/Snippet Library for Unity 3D
 #### Utils
 
 - `SceneRecorder` frame capture and video creation on OSX using ffmpeg installed by Homebrew.
-- `CreateReorderableList` helps to draw a reorderable list with the correct spacing. See example for usage.
+- `ReorderableListUtil` wrapper to `Create` and `Draw` a reorderable list with the correct spacing. See example for usage.
 - `BitmaskHelper` provides `IsSet`, `Set`, `Unset` enum helper.
 - `Cycle` wraps a `Enumerable` into a container with a `Next` method.
 - `Singleton` inherit from to make a singleton. Umm... not sure about this.
