@@ -1,6 +1,4 @@
 ﻿using UnityEngine;
-
-#if UNITY_EDITOR
 using UnityEditor;
 
 namespace BowieCode {
@@ -46,5 +44,3 @@ namespace BowieCode {
         }
     }
 }
-
-#endif

@@ -1,19 +1,17 @@
 ﻿using UnityEngine;
 using System;
-
-#if UNITY_EDITOR
 using UnityEditor;
 using UnityEditorInternal;
 
 namespace BowieCode {
 
-    public partial class EditorUtils {
+	public class ReorderableListUtil {
 
         /// <summary>
         /// Helps to draw a reorderable list with the correct spacing.
         /// </summary>
         /// <param name="list"></param>
-        public static void DrawReorderableList ( ReorderableList list ) {
+        public static void Draw ( ReorderableList list ) {
             GUILayout.Space( 5 );
             try {
                 list.DoLayoutList();
@@ -32,7 +30,7 @@ namespace BowieCode {
         /// <param name="property">The name of the List in the serializedObject</param>
         /// <param name="subproperties">A list of the Lists propreties to display</param>
         /// <returns></returns>
-        public static ReorderableList CreateReorderableList ( SerializedObject serializedObject, string listTitle, string property, string[] subproperties ) {
+        public static ReorderableList Create ( SerializedObject serializedObject, string listTitle, string property, string[] subproperties ) {
             var list = new ReorderableList( serializedObject,
                     serializedObject.FindProperty( property ),
                     true, true, true, true );
@@ -60,5 +58,3 @@ namespace BowieCode {
         }
     }
 }
-
-#endif
