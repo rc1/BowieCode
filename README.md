@@ -26,13 +26,14 @@ Personal Code, Snippet & Reference Library for Unity 3D
 #### Utils
 
 - `SceneRecorder` frame capture and video creation on OSX using ffmpeg installed by Homebrew.
-- `ReorderableListUtil` wrapper to `Create` and `Draw` a reorderable list with the correct spacing. See example for usage.
+- `ReorderableListUtil` wrapper to `Create` and `Draw` a reorderable list with the correct spacing. See example for usage. See: [ReorderableListExample](https://github.com/rc1/BowieCode/blob/master/Examples/ReorderableListExample.cs) & [ReorderableListExampleEditor](https://github.com/rc1/BowieCode/blob/master/Examples/Editor/ReorderableListExampleEditor.cs)
 - `BitmaskHelper` provides `IsSet`, `Set`, `Unset` enum helper.
 - `Cycle` wraps a `Enumerable` into a container with a `Next` method.
-- `Singleton` inherit from to make a singleton. Umm... not sure about this.
-- `EditorButton` creates a button in the editor when paired with an `EditorButtonAttribute` .
+- `Singleton` inherit from to make a singleton. _Umm... really not sure about this_.
+- `BowieTime` fractional day & time and format helpers.
+- `EditorButton` creates a button in the editor when paired with an `EditorButtonAttribute`. See: [EditorButtonExample](https://github.com/rc1/BowieCode/blob/master/Examples/EditorButtonExample.cs)
 -  __Attributes & Drawers__
-    - `TagAttribute` and `TagDrawer` provides range tag selection for `string`.
-    - `MinMaxSliderAttribute` and `MinMaxSliderDrawer` provides range sliders for `Vector2`.
-    - `EditorButtonAttribute` and `EditorButtonAttribute` creates a button in the editor for `EditorButton`
+    - `TagAttribute` and `TagDrawer` provides range tag selection for `string`. See: [TagAttributeExample.](https://github.com/rc1/BowieCode/blob/master/Examples/TagAttributeExample.cs)
+    - `MinMaxSliderAttribute` and `MinMaxSliderDrawer` provides range sliders for `Vector2`. See: [MinMaxSliderExample](https://github.com/rc1/BowieCode/blob/master/Examples/MinMaxSliderExample.cs)
+    - `EditorButtonAttribute` and `EditorButtonAttribute` creates a button in the editor for `EditorButton`. See: [EditorButtonExample](https://github.com/rc1/BowieCode/blob/master/Examples/EditorButtonExample.cs)
 
