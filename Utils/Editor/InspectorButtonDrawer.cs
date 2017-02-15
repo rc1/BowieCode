@@ -8,8 +8,8 @@ using System.Reflection;
 
 namespace BowieCode {
 
-	[CustomPropertyDrawer (typeof (EditorButtonAttribute))]
-	public class EditorButtonDrawer : PropertyDrawer {
+	[CustomPropertyDrawer (typeof (InspectorButtonAttribute))]
+	public class InspectorButtonDrawer : PropertyDrawer {
 
 		// Method & instance
 		object targetObject;
@@ -17,18 +17,18 @@ namespace BowieCode {
 
 		public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
 		{
-			var editorButtonAttribute = attribute as EditorButtonAttribute;
+			var editorButtonAttribute = attribute as InspectorButtonAttribute;
 
 			UpdateTargetAndMethodInfo( property );
 
 			if ( methodInfo == null ) {
-				EditorGUI.HelpBox( position, string.Format( "EditorButton: Method '{0}' not found", editorButtonAttribute.methodName ), MessageType.Warning );
+				EditorGUI.HelpBox( position, string.Format( "InspectorButton: Method '{0}' not found", editorButtonAttribute.methodName ), MessageType.Warning );
 				return;
 			}
 
 			EditorGUI.BeginDisabledGroup( !property.FindPropertyRelative( "isEnabled" ).boolValue );
 
-			if ( GUI.Button( position, editorButtonAttribute.buttonTitle == null ? label.text : editorButtonAttribute.buttonTitle ) ) {
+			if ( GUI.Button( position, editorButtonAttribute.buttonText == null ? label.text : editorButtonAttribute.buttonText ) ) {
 				methodInfo.Invoke( property.serializedObject.targetObject, null );
 			}
 
@@ -50,7 +50,7 @@ namespace BowieCode {
 
 		void UpdateTargetAndMethodInfo ( SerializedProperty property ) {
 			if ( targetObject == null ) {
-				var editorButtonAttribute = attribute as EditorButtonAttribute;
+				var editorButtonAttribute = attribute as InspectorButtonAttribute;
 				targetObject = property.serializedObject.targetObject;
 				methodInfo = targetObject.GetType().GetMethod( editorButtonAttribute.methodName );
 			}

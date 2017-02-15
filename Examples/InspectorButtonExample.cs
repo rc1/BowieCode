@@ -4,22 +4,22 @@ using UnityEngine;
 
 namespace BowieCode {
 
-	public class EditorButtonExample : MonoBehaviour {
+	public class InspectorButtonExample : MonoBehaviour {
 
 		// Buttons
 
 		// Button text will be the name of the button property
-		[EditorButton("OnToggledButton")]
-		public EditorButton toggledButton;
+		[InspectorButton("OnToggledButton")]
+		public InspectorButton toggledButton;
 
 		[Space]
 
 		// Button text will be the secord parameter of the attribute
-		[EditorButton("OnSetOn", "Enable Button")]
-		public EditorButton setOnButton;
+		[InspectorButton("OnSetOn", "Enable Button")]
+		public InspectorButton setOnButton;
 
-		[EditorButton("OnSetOff", "Disable Button")]
-		public EditorButton setOffButton;
+		[InspectorButton("OnSetOff", "Disable Button")]
+		public InspectorButton setOffButton;
 
 		// Button Handlers
 

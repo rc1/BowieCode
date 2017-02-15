@@ -31,9 +31,9 @@ Personal Code, Snippet & Reference Library for Unity 3D
 - `Cycle` wraps a `Enumerable` into a container with a `Next` method.
 - `Singleton` inherit from to make a singleton. _Umm... really not sure about this_.
 - `BowieTime` fractional day & time and format helpers.
-- `EditorButton` creates a button in the editor when paired with an `EditorButtonAttribute`. See: [EditorButtonExample](https://github.com/rc1/BowieCode/blob/master/Examples/EditorButtonExample.cs)
+- `InspectorButton` creates a button in the inspector when paired with an `InspectorButtonAttribute`. See: [InspectorButtonExample](https://github.com/rc1/BowieCode/blob/master/Examples/InspectorExample.cs)
 -  __Attributes & Drawers__
     - `TagAttribute` and `TagDrawer` provides range tag selection for `string`. See: [TagAttributeExample.](https://github.com/rc1/BowieCode/blob/master/Examples/TagAttributeExample.cs)
     - `MinMaxSliderAttribute` and `MinMaxSliderDrawer` provides range sliders for `Vector2`. See: [MinMaxSliderExample](https://github.com/rc1/BowieCode/blob/master/Examples/MinMaxSliderExample.cs)
-    - `EditorButtonAttribute` and `EditorButtonAttribute` creates a button in the editor for `EditorButton`. See: [EditorButtonExample](https://github.com/rc1/BowieCode/blob/master/Examples/EditorButtonExample.cs)
+    - `InspectorButtonAttribute` and `InspectorButtonAttribute` creates a button in the editor for `InspectorButton`. See: [InspectorButtonExample](https://github.com/rc1/BowieCode/blob/master/Examples/InspectorButtonExample.cs)
 

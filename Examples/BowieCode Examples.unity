@@ -321,7 +321,7 @@ GameObject:
   - component: {fileID: 259441291}
   - component: {fileID: 259441292}
   m_Layer: 0
-  m_Name: EditorButton
+  m_Name: InspectorButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1487,7 +1487,7 @@ GameObject:
   - component: {fileID: 1508460146}
   - component: {fileID: 1508460147}
   m_Layer: 0
-  m_Name: TagAttributeExample
+  m_Name: TagAttribute
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

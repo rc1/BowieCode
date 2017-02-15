@@ -7,10 +7,10 @@ using System.Reflection;
 namespace BowieCode {
 
 	/// <summary>
-	/// Creates an editor button in the inspector when combined with the [EditorButton] attribute
+	/// Creates an inspector button in the inspector when combined with the [EditorButton] attribute
 	/// </summary>
 	[System.Serializable]
-	public class EditorButton {
+	public class InspectorButton {
 
 		/// <summary>
 		/// Enables or disables the button in the inspector
