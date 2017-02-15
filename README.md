@@ -22,10 +22,6 @@ Personal Code, Snippet & Reference Library for Unity 3D
 - `RandomScale` applies a random scale to all or individual axises.
 - `RandomOffset` applies a random position offset to to all or individual axises.
 
-### Attributes
-
-- `TagAttribute` and `TagDrawer` provides range tag selection for `string`.
-- `MinMaxSliderAttribute` and `MinMaxSliderDrawer` provides range sliders for `Vector2`.
 
 #### Utils
 
@@ -34,4 +30,9 @@ Personal Code, Snippet & Reference Library for Unity 3D
 - `BitmaskHelper` provides `IsSet`, `Set`, `Unset` enum helper.
 - `Cycle` wraps a `Enumerable` into a container with a `Next` method.
 - `Singleton` inherit from to make a singleton. Umm... not sure about this.
+- `EditorButton` creates a button in the editor when paired with an `EditorButtonAttribute` .
+-  __Attributes & Drawers__
+    - `TagAttribute` and `TagDrawer` provides range tag selection for `string`.
+    - `MinMaxSliderAttribute` and `MinMaxSliderDrawer` provides range sliders for `Vector2`.
+    - `EditorButtonAttribute` and `EditorButtonAttribute` creates a button in the editor for `EditorButton`
 

@@ -4,9 +4,11 @@ using UnityEngine;
 
 namespace BowieCode {
 
-	public class TagAttribute : PropertyAttribute {
-		
-		public TagAttribute () {}
+	public class TagAttributeExample : MonoBehaviour {
+
+		[Tag]
+		public string tag;
+
 	}
 
 }
