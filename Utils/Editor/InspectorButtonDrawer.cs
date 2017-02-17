@@ -22,13 +22,17 @@ namespace BowieCode {
 			UpdateTargetAndMethodInfo( property );
 
 			if ( methodInfo == null ) {
-				EditorGUI.HelpBox( position, string.Format( "InspectorButton: Method '{0}' not found", editorButtonAttribute.methodName ), MessageType.Warning );
+				EditorGUI.HelpBox( position, string.Format( "InspectorButton: Method '{0}' not found", editorButtonAttribute.MethodName ), MessageType.Warning );
 				return;
 			}
 
-			EditorGUI.BeginDisabledGroup( !property.FindPropertyRelative( "isEnabled" ).boolValue );
+			bool isDisabled;
+			isDisabled = !property.FindPropertyRelative( "isEnabled" ).boolValue;
+			isDisabled = isDisabled ? isDisabled : (editorButtonAttribute.PlayModeOnly && !EditorApplication.isPlaying);
 
-			if ( GUI.Button( position, editorButtonAttribute.buttonText == null ? label.text : editorButtonAttribute.buttonText ) ) {
+			EditorGUI.BeginDisabledGroup( isDisabled );
+
+			if ( GUI.Button( position, editorButtonAttribute.ButtonText == null ? label.text : editorButtonAttribute.ButtonText ) ) {
 				methodInfo.Invoke( property.serializedObject.targetObject, null );
 			}
 
@@ -52,7 +56,7 @@ namespace BowieCode {
 			if ( targetObject == null ) {
 				var editorButtonAttribute = attribute as InspectorButtonAttribute;
 				targetObject = property.serializedObject.targetObject;
-				methodInfo = targetObject.GetType().GetMethod( editorButtonAttribute.methodName );
+				methodInfo = targetObject.GetType().GetMethod( editorButtonAttribute.MethodName );
 			}
 		}
 	}

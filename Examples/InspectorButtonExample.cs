@@ -9,29 +9,33 @@ namespace BowieCode {
 		// Buttons
 
 		// Button text will be the name of the button property
-		[InspectorButton("OnToggledButton")]
-		public InspectorButton toggledButton;
+		[InspectorButton("SayYay")]
+		public InspectorButton sayYayButton;
 
-		[Space]
+		[Space(10)]
 
-		// Button text will be the secord parameter of the attribute
+		// Button text will be the second parameter of the attribute
 		[InspectorButton("OnSetOn", "Enable Button")]
 		public InspectorButton setOnButton;
 
 		[InspectorButton("OnSetOff", "Disable Button")]
 		public InspectorButton setOffButton;
 
-		// Button Handlers
+		[Space(10)]
+		[InspectorButton( MethodName="SayYay", ButtonText="Play Mode Only", PlayModeOnly = true)]
+		public InspectorButton playModeBitton;
+
+		// Button Handlers 
 
 		public void OnSetOff () {
-			toggledButton.isEnabled = false;
+			sayYayButton.isEnabled = false;
 		}
 
 		public void OnSetOn () {
-			toggledButton.isEnabled = true;
+			sayYayButton.isEnabled = true;
 		}
 
-		public void OnToggledButton () {
+		public void SayYay () {
 			Debug.Log( "Yay!" );
 		}
 

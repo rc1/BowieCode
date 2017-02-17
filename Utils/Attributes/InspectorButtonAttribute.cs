@@ -10,16 +10,27 @@ namespace BowieCode {
 	/// </summary>
 	public class InspectorButtonAttribute : PropertyAttribute {
 
-		// Public setters
-		public string methodName;
-		public string buttonText;
+		/// <summary>
+		/// The name of the method to be invoked.
+		/// </summary>
+		public string MethodName;
+		/// <summary>
+		/// Optional text of the button. When not set the MethodName will be used.
+		/// </summary>
+		public string ButtonText;
+		/// <summary>
+		/// Disable the button when not in play mode
+		/// </summary>
+		public bool PlayModeOnly = false;
+
+		public InspectorButtonAttribute() {}
 
 		/// <summary>
 		/// Initializes a new instance of the <see cref="BowieCode.InspectorButtonAttribute"/> class. The button will use the name of the property as its text.
 		/// </summary>
 		/// <param name="methodName">The name of the method to be called</param>
 		public InspectorButtonAttribute( string methodName ) {
-			this.methodName = methodName;
+			MethodName = methodName;
 		}
 
 		/// <summary>
@@ -27,10 +38,11 @@ namespace BowieCode {
 		/// </summary>
 		/// <param name="methodName">Method name.</param>
 		/// <param name="title">The button text.</param>
-		public InspectorButtonAttribute ( string methodName, string text ) {
-			this.methodName = methodName;
-			buttonText = text;
+		public InspectorButtonAttribute ( string methodName, string buttonText ) {
+			MethodName = methodName;
+			ButtonText = buttonText;
 		}
+			
 	}
 
 }

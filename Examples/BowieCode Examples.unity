@@ -351,11 +351,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4726e6631e2fb467b87c02199286b10d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toggledButton:
-    isEnabled: 1
+  sayYayButton:
+    isEnabled: 0
   setOnButton:
     isEnabled: 1
   setOffButton:
+    isEnabled: 1
+  playModeBitton:
     isEnabled: 1
 --- !u!1 &286970266
 GameObject:
