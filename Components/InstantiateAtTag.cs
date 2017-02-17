@@ -92,8 +92,9 @@ namespace BowieCode {
 
 
 #if UNITY_EDITOR
-				// Add to undo
-				Undo.RegisterCreatedObjectUndo( clone, "Create instance" );
+				if ( !EditorApplication.isPlaying ) {
+					Undo.RegisterCreatedObjectUndo( clone, "Create instance" );
+				}
 #endif
 					
 			});
