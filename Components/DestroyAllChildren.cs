@@ -7,19 +7,19 @@ using UnityEditor;
 #endif
 
 /// <summary>
-/// Destroy the gameobject children. Useful for dynamic content. Can be undone in editor mode
+/// Destroies all the gameobject's children. Useful for dynamic content. Can be undone in editor mode.
 /// </summary>
-[AddComponentMenu("BowieCode/Destroy Children")]
-public class DestroyChildren : MonoBehaviour {
+[AddComponentMenu("BowieCode/Destroy All Children")]
+public class DestroyAllChildren : MonoBehaviour {
 
-	[InspectorButton(MethodName="Do",ButtonText="Destroy Children")]
-	public InspectorButton destoryChildrenButton;
+	[InspectorButton(MethodName="DoDestructionOfChildren",ButtonText="Destroy All Children")]
+	public InspectorButton destroyChildrenButton;
 
-	public void Do () {
+	public void DoDestructionOfChildren () {
 		var idx = transform.childCount;
 		while ( idx-- >= 1 ) {
 			try {
-				DeleteChild( transform.GetChild( idx ).gameObject );
+				DestoryChild( transform.GetChild( idx ).gameObject );
 			} catch ( System.Exception e ) {
 				Debug.LogError( "Failed to destory child at index: " + idx );
 				throw e;
@@ -27,7 +27,7 @@ public class DestroyChildren : MonoBehaviour {
 		}
 	}
 
-	void DeleteChild ( GameObject child ) {
+	void DestoryChild ( GameObject child ) {
 #if UNITY_EDITOR
 		if ( !EditorApplication.isPlaying ) {
 			Undo.DestroyObjectImmediate( child.gameObject );

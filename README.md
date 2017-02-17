@@ -23,7 +23,7 @@ Personal Code, Snippet & Reference Library for Unity 3D
 - `RandomOffset` applies a random position offset to to all or individual axises.
 - `PivotGizmo3D` draws customisable axises like the move tool when the object is not selected.
 - `InstantiateAtTag` creates instances of a prefab in the scene at the position of game objects with a certain tag. When used in editor it can be undone. Instances can be parented with the game object at the tag, a container or the root of the scene. 
-- `DestroyChildren` destroies the gameobject's children. Useful for dynamic content. Can be undone when in editor mode.
+- `DestroyAllChildren` destroys the gameobject's children. Useful for dynamic content. Can be undone when in editor mode.
 
 #### Utils
 
