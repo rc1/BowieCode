@@ -22,7 +22,7 @@ namespace BowieCode {
 			UpdateTargetAndMethodInfo( property );
 
 			if ( methodInfo == null ) {
-				EditorGUI.HelpBox( position, string.Format( "InspectorButton: Method '{0}' not found", editorButtonAttribute.MethodName ), MessageType.Warning );
+				EditorGUI.HelpBox( position, string.Format( "InspectorButton: Public method '{0}' not found", editorButtonAttribute.MethodName ), MessageType.Warning );
 				return;
 			}
 
