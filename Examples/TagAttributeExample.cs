@@ -7,7 +7,7 @@ namespace BowieCode {
 	public class TagAttributeExample : MonoBehaviour {
 
 		[Tag]
-		public string tag;
+		public string tagSelection;
 
 	}
 
