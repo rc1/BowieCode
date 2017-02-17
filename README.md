@@ -21,6 +21,7 @@ Personal Code, Snippet & Reference Library for Unity 3D
 - `TextGizo` always displays text in the scene view.
 - `RandomScale` applies a random scale to all or individual axises.
 - `RandomOffset` applies a random position offset to to all or individual axises.
+- `PivotGizmo3D` draws customisable axises like the move tool when the object is not selected.
 
 
 #### Utils
