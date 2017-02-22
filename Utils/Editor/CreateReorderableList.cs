@@ -28,7 +28,7 @@ namespace BowieCode {
         /// <param name="serializedObject">serializedObject</param>
         /// <param name="listTitle">Display name</param>
         /// <param name="property">The name of the List in the serializedObject</param>
-        /// <param name="subproperties">A list of the Lists propreties to display</param>
+        /// <param name="subproperties">A list of the Lists properties to display</param>
         /// <returns></returns>
         public static ReorderableList Create ( SerializedObject serializedObject, string listTitle, string property, string[] subproperties ) {
             var list = new ReorderableList( serializedObject,
