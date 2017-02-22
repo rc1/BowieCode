@@ -10,13 +10,24 @@ namespace BowieCode {
 	/// </summary>
 	[System.Serializable]
 	public class ShapedRange {
-
+		
+		/// <summary>
+		/// Initializes a new instance of the <see cref="BowieCode.ShapedRange"/> class.
+		/// </summary>
 		public ShapedRange () {}
 
+		/// <summary>
+		/// Initializes a new instance of the <see cref="BowieCode.ShapedRange"/> class.
+		/// </summary>
+		/// <param name="constant">Constant float value</param>
 		public ShapedRange ( float constant ) {
 			this.constant = constant;
 		}
 
+		/// <summary>
+		/// Initializes a new instance of the <see cref="BowieCode.ShapedRange"/> class.
+		/// </summary>
+		/// <param name="linear">Linear.</param>
 		public ShapedRange ( Vector2 linear ) {
 			this.linear = linear;
 		}
@@ -25,10 +36,9 @@ namespace BowieCode {
 			this.curve = curve;
 		}
 
-
 		public enum Shape {
 			Constant,
-			Linear,
+			MinMax,
 			Curve
 		}
 
@@ -36,20 +46,30 @@ namespace BowieCode {
 
 		public float constant;
 		public Vector2 linear;
-		public AnimationCurve curve;
+		public AnimationCurve curve = AnimationCurve.Linear( 0.0f, 1.0f, 1.0f, 1.0f);
 
-		public float Evaluate () {
-			return Evaluate( 0.0f );
+		/// <summary>
+		/// Returns a random value from the range
+		/// </summary>
+		/// <returns>The random.</returns>
+		public float GetRandom() {
+			return Evaluate( Random.value );
 		}
-
+			
+		/// <summary>
+		/// Evaluate the specified scaler.
+		/// </summary>
+		/// <param name="scaler">Scaler.</param>
 		public float Evaluate( float scaler ) {
 			if ( shape == Shape.Constant ) {
 				return constant;
-			} else if ( shape == Shape.Linear ) {
-				return Mathf.InverseLerp( linear.x, linear.y, scaler );
+			} else if ( shape == Shape.MinMax ) {
+				return Mathf.Clamp( Mathf.InverseLerp( linear.x, linear.y, scaler ), linear.x, linear.y );
 			} 
 			return curve.Evaluate( scaler );
 		}
+
+
 
 	}
 
