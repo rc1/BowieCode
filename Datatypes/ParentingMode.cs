@@ -40,8 +40,9 @@ public class ParentingMode  {
 				child.parent = target;
 				break;
 			case ModeType.Scene:
-			default:
 				child.parent = child.root;
+				break;
+			default:
 				break;
 		}
 	}
