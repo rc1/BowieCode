@@ -10,6 +10,7 @@ Personal Code, Snippet & Reference Library for Unity 3D
 - `BindToCamera` will position an transform a parent camera's near or far.
 - `CameraFulstrumGizmo` alway shows the camera's fulstrum in the scene view even if the camera is not selected.
 - `DestroyAllChildren` destroys the gameobject's children. Useful for dynamic content. Can be undone when in editor mode.
+- `DropdownCameraSelector`binds a list of cameras to a UI.Dropdown
 - `GridRepeater` clones prefabs into a grid
 - `InstantiateAtTag` creates instances of a prefab in the scene at the position of game objects with a certain tag. When used in editor it can be undone. Instances can be parented with the game object at the tag, a container or the root of the scene. 
 - `Motion` applies trig based motions to selectable variables of the transform component.
