@@ -21,8 +21,8 @@ public class ParentingModeDrawer : PropertyDrawer {
 
 		EditorGUI.PrefixLabel( prefixPosition, label );
 
-		EditorGUIUtility.labelWidth = 35.0f;
-		EditorGUI.PropertyField( modePosition, mode );
+		EditorGUIUtility.labelWidth = 0.0f;
+		mode.intValue = (int)(ParentingMode.ModeType)EditorGUI.EnumPopup( modePosition, (ParentingMode.ModeType)mode.enumValueIndex );
 
 		if ( mode.enumValueIndex == (int)ParentingMode.ModeType.Target ) {
 			var targetPositon = modePosition;
