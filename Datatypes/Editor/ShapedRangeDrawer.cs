@@ -26,7 +26,7 @@ namespace BowieCode {
 			} else if ( shape.enumValueIndex == (int) (ShapedRange.Shape) ShapedRange.Shape.Curve ) {
 				var curve = property.FindPropertyRelative( "curve" );
 				EditorGUI.PropertyField( valuePosition, curve, label );
-			} else if ( shape.enumValueIndex == (int) (ShapedRange.Shape) ShapedRange.Shape.Linear ) {
+			} else if ( shape.enumValueIndex == (int) (ShapedRange.Shape) ShapedRange.Shape.MinMax ) {
 				var linear = property.FindPropertyRelative( "linear" );
 				var prefixShape = valuePosition;
 				prefixShape.width = EditorGUIUtility.labelWidth;
