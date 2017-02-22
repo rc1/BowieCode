@@ -16,13 +16,13 @@ namespace BowieCode {
 			var z = property.FindPropertyRelative( "z" );
 
 			var prefixPosition = position;
-			prefixPosition.width = EditorGUIUtility.labelWidth;
+			prefixPosition.width = EditorGUIUtility.labelWidth - ( EditorGUI.indentLevel * 15.0f );
 
 			var quarterRemainingSpace = ( position.width - prefixPosition.width ) / 4.0f;
 
 			var allPosition = position;
 			allPosition.width = quarterRemainingSpace;
-			allPosition.x += EditorGUIUtility.labelWidth;
+			allPosition.x += prefixPosition.width;
 
 			var xPosition = allPosition;
 			xPosition.x += quarterRemainingSpace;
