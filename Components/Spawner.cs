@@ -44,8 +44,8 @@ namespace BowieCode {
 		/// <summary>
 		/// How oftens prefabs are spawned when the SpawnMode is SpawnMode.RandomFrame
 		/// </summary>
-		[MinMaxSlider(0.3f,1.0f)]
-		public Vector2 spawnEvery;
+		public ShapedRange spawnEveryRange;
+
 		float _nextSpawnTime = -1.000f;
 
 		/// <summary>
@@ -61,7 +61,7 @@ namespace BowieCode {
 		/// <summary>
 		/// The random
 		/// </summary>
-		public ShapedRange numberPerSpawn = new ShapedRange( 1.0f );
+		public ShapedRange perSpawnRange = new ShapedRange( 1.0f );
 
 		Transform _transform;
 
@@ -108,7 +108,7 @@ namespace BowieCode {
 		}
 
 		public void DoSpawn () {
-			var numberToSpawn = numberPerSpawn.Evaluate( Random.value );
+			var numberToSpawn = perSpawnRange.GetRandom();
 
 			for ( int i = 0; i < numberToSpawn; i++ ) {
 				DoSpawnOne();
@@ -118,6 +118,8 @@ namespace BowieCode {
 		public void DoSpawnOne () {
 			var clone = EditorSafe.CreateFromPrefab( prefab );
 			clone.transform.position = transform.position + GetRandomSpawnOffset();
+			container.DoParent( _transform, clone.transform );
+
 		}
 
 		bool ShouldSpawn () {
@@ -125,7 +127,7 @@ namespace BowieCode {
 		}
 
 		void UpdateNextSpawnTime () {
-			_nextSpawnTime = Time.time + Random.Range( spawnEvery.x, spawnEvery.y );;
+			_nextSpawnTime = Time.time + spawnEveryRange.GetRandom();
 		}
 
 		Vector3 GetRandomSpawnOffset () {
