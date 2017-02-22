@@ -22,6 +22,8 @@ namespace BowieCode {
 		public float alpha = 1.0f;
 		public bool showOnSelected = false;
 
+
+#if UNITY_EDITOR
 		public void OnDrawGizmos () {
 
 			// Only when selected
@@ -45,6 +47,7 @@ namespace BowieCode {
 			Handles.color = useDefaultColor ? ApplyAlpha( Handles.zAxisColor, alpha ) : color;
 			Handles.ArrowCap( 0, _transform.transform.position, _transform.transform.rotation, arrowSize );
 		}
+#endif
 
 		public static Color ApplyAlpha ( Color c, float a ) {
 			c.a = a;
