@@ -77,6 +77,9 @@ namespace BowieCode {
 		}
 
 		void Start () {
+
+			_transform = GetComponent<Transform>();
+
 			if ( spawnMode == SpawnMode.RandomFrame ) {
 				DoSpawn();
 			}
