@@ -7,8 +7,8 @@ Personal Code, Snippet & Reference Library for Unity 3D
 
 ### Components
 
-- `BindToCamera` will position an transform a parent camera's near or far.
-- `CameraFulstrumGizmo` alway shows the camera's fulstrum in the scene view even if the camera is not selected.
+- `BindToCamera` will bind it's transform to parent's camera's near or far. Handy for keeping thing to the front or the back of a camera.
+- `CameraFulstrumGizmo` alway shows the camera's fulstrum in the scene view. Even when the camera is not selected.
 - `DestroyAllChildren` destroys the gameobject's children. Useful for dynamic content. Can be undone when in editor mode.
 - `DistributeChildren` distributes it's children between two points. The two points can be manipulated in the scene view.
 - `DropdownCameraSelector`binds a list of cameras to a UI.Dropdown
