@@ -9,6 +9,7 @@ Personal Code, Snippet & Reference Library for Unity 3D
 
 - `BindToCamera` will position an transform a parent camera's near or far.
 - `CameraFulstrumGizmo` alway shows the camera's fulstrum in the scene view even if the camera is not selected.
+- `DefaultInstance` Gets/sets a single static `Default` instance. Rather than have singletons, instances can utilize this generic container. For example `DefaultInstance<MyClass>.Set( this )` and `MyClass instance = DefaultInstance<MyClass>.Get()`.
 - `DestroyAllChildren` destroys the gameobject's children. Useful for dynamic content. Can be undone when in editor mode.
 - `DistributeChildren` distributes it's children between two points. The two points can be manipulated in the scene view.
 - `DropdownCameraSelector`binds a list of cameras to a UI.Dropdown
@@ -19,7 +20,6 @@ Personal Code, Snippet & Reference Library for Unity 3D
 - `MouseHider` hides the mouse after a set number of seconds.
 - `PivotGizmo3D` draws customisable axises like the move tool when the object is not selected.
 - `SceneRecorder` frame capture and video creation on OSX using ffmpeg installed by Homebrew.
-- `Singleton` inherit from to make a singleton. _Umm... really not sure about this_.
 - `Spawner` instantiates prefabs in a random location within a predefined shape. It can set to do this every frame and spawn multiples.
 - `TextGizo` always displays text in the scene view.
 
