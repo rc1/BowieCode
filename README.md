@@ -28,6 +28,7 @@ Personal Code, Snippet & Reference Library for Unity 3D
 ### Attributes
 
 - `TagAttribute` and `TagDrawer` provides range tag selection for `string`. See: [TagAttributeExample.](https://github.com/rc1/BowieCode/blob/master/Examples/TagAttributeExample.cs)
+- `LayerAttribute` and `LayerDrawer` provides layer selection for `int`. 
 - `MinMaxSliderAttribute` and `MinMaxSliderDrawer` provides range sliders for `Vector2`. See: [MinMaxSliderExample](https://github.com/rc1/BowieCode/blob/master/Examples/MinMaxSliderExample.cs)
 - `InspectorButtonAttribute` and `InspectorButtonAttribute` creates a button in the editor for `InspectorButton`. See: [InspectorButtonExample](https://github.com/rc1/BowieCode/blob/master/Examples/InspectorButtonExample.cs)
 
@@ -46,7 +47,9 @@ Personal Code, Snippet & Reference Library for Unity 3D
 	- `MapIntervalF` maps an input float from one range to another.
 	- `SinF`is a sine wave generator with an amplitude, and frequency defined by `cyclesPerSecond`
 - `BowieTime` fractional day & time and format helpers.
+- `BowieExtensions` contains `ForEachWithIndex` for collection enumeration
 - Editor Only
 	- `ReorderableListUtil` wrapper to `Create` and `Draw` a reorderable list with the correct spacing. See example for usage. See: [ReorderableListExample](https://github.com/rc1/BowieCode/blob/master/Examples/ReorderableListExample.cs) & [ReorderableListExampleEditor](https://github.com/rc1/BowieCode/blob/master/Examples/Editor/ReorderableListExampleEditor.cs)
+
 
 

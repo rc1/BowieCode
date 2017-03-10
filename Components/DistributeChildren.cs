@@ -24,12 +24,15 @@ namespace BowieCode {
 		[InspectorButton(MethodName="RedistributeChildren",ButtonText="Distribute Children")]
 		public InspectorButton distributeButton;
 #endif
+		void OnValidate () {
+			RedistributeChildren();
+		}
 
 		/// <summary>
 		/// Preform the distribution of the children.
 		/// </summary>
 		public void RedistributeChildren () {
-			if ( transform.childCount > 1 ) {
+			if ( transform.childCount <= 1 ) {
 				return;
 			}
 

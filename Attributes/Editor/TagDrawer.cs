@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEditor;
 
 namespace BowieCode {
@@ -10,7 +8,6 @@ namespace BowieCode {
 		
 		public override void OnGUI (Rect position, SerializedProperty property, GUIContent label) {
 
-			// Now draw the property as a Slider or an IntSlider based on whether it's a float or integer.
 			if ( property.propertyType == SerializedPropertyType.String )
 				property.stringValue = EditorGUI.TagField( position, label, property.stringValue );
 			else

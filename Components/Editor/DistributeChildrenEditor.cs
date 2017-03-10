@@ -33,6 +33,7 @@ namespace BowieCode {
 			}
 
 			if ( isDirty ) {
+				Undo.RecordObject( target, "Move distribution points" );
 				distributeChildren.RedistributeChildren();
 			}
 

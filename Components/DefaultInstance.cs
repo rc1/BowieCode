@@ -4,7 +4,8 @@ using System.Collections.Generic;
 namespace BowieCode {
 
 	/// <summary>
-	/// Gets/sets a single static `Default` instance. Rather than have singletons, instances utilize utilitise this generic container. 
+	/// Gets/sets a single static `Default` instance. Rather than have singletons, instances
+	///  utilize utilitise this generic container. 
 	/// </summary>
 	public class DefaultInstance<T> {
 
