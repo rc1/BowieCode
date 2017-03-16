@@ -58,7 +58,8 @@ namespace BowieCode {
 			Gizmos.color = Color.yellow;
 			for ( float i = 0.0f; i < transform.childCount; i++ ) {
 				Vector3 pos = Vector3.Lerp( point1, point2, i / ( transform.childCount - 1.0f ) );
-				Gizmos.DrawSphere( transform.position + pos, 0.1f );
+				//Gizmos.DrawSphere( transform.position + pos, 0.1f );
+				Gizmos.DrawIcon( transform.position + pos, "Target Gizmo.png", false );
 			}
 		}
 			
