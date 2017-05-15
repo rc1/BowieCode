@@ -30,14 +30,14 @@ namespace BowieCode {
 			return PercentOfDay( DateTime.Now );
 		}
 
-		public static DateTimeOffset FromPercentOfDay ( float percentOfDay ) {
+		public static DateTime FromPercentOfDay ( float percentOfDay ) {
 			DateTime currentDay = new DateTime( DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, 0, 0, 0 );
 			DateTime nextDay = new DateTime( DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, 23, 59, 59 );
 			TimeSpan aDay = nextDay - currentDay;
 			return currentDay.AddMilliseconds( aDay.TotalMilliseconds * percentOfDay );
 		}
 
-		public static DateTimeOffset FromPercentOfYear ( float percentOfYear ) {
+		public static DateTime FromPercentOfYear ( float percentOfYear ) {
 			DateTime currentYear = new DateTime( DateTime.Now.Year, 1, 1, 0, 0, 0 );
 			DateTime nextYear = new DateTime( DateTime.Now.Year + 1, 1, 1, 0, 0, 0 );
 			nextYear = nextYear.AddSeconds( -1.0f );
