@@ -18,7 +18,7 @@ namespace BowieCode {
 
 		/// <summary>
 		/// Gets the default instance. Throws if the default instance has not been set.
-		/// You can wait for the default instance to be set with `WhenSet`.
+		/// You can wait for the default instance to be set with `OnSet`.
 		/// </summary>
 		/// <returns>The instance or default</returns>
 		public static T Get () {
@@ -73,7 +73,7 @@ namespace BowieCode {
 		/// Or, triggers it once it is. 
 		/// </summary>
 		/// <param name="action">The action to be called.</param>
-		public static void WhenSet ( Action<T> action ) {
+		public static void OnSet ( Action<T> action ) {
 			if ( _isSet ) {
 				action( _defaultInstance );
 			} else {
