@@ -6,7 +6,7 @@ namespace BowieCode {
 
 	/// <summary>
 	/// Gets/sets a single static `Default` instance. Rather than have singletons, instances
-	///  utilize utilitise this generic container. 
+	///  utilize utilitise this generic container.
 	/// </summary>
 	public class DefaultInstance<T> {
 
@@ -14,11 +14,11 @@ namespace BowieCode {
 
 		private static T _defaultInstance = default(T);
 
-		private static List<Action<T>> _onSets = new List<Action<T>> (); 
+		private static List<Action<T>> _whenSets = new List<Action<T>> ();
 
 		/// <summary>
 		/// Gets the default instance. Throws if the default instance has not been set.
-		/// You can wait for the default instance to be set with `OnSet`.
+		/// You can wait for the default instance to be set with `WhenSet`.
 		/// </summary>
 		/// <returns>The instance or default</returns>
 		public static T Get () {
@@ -40,11 +40,11 @@ namespace BowieCode {
 			_isSet = true;
 			// Create a copy of the onSet actions, and trigger them
 			// the copy is to prevent anything being added to the list
-			var onSets = _onSets.ToArray();
-			foreach ( var onSet in onSets )  {
-				onSet( _defaultInstance );
+			var whenSets = _whenSets.ToArray();
+			foreach ( var whenSet in whenSets )  {
+				whenSet( _defaultInstance );
 			}
-			_onSets.Clear();
+			_whenSets.Clear();
 		}
 
 		/// <summary>
@@ -70,14 +70,14 @@ namespace BowieCode {
 
 		/// <summary>
 		/// Trigger the action immediately if the default instance has been set.
-		/// Or, triggers it once it is. 
+		/// Or, triggers it once it is.
 		/// </summary>
 		/// <param name="action">The action to be called.</param>
-		public static void OnSet ( Action<T> action ) {
+		public static void WhenSet ( Action<T> action ) {
 			if ( _isSet ) {
 				action( _defaultInstance );
 			} else {
-				_onSets.Add( action );
+				_whenSets.Add( action );
 			}
 		}
 
