@@ -90,56 +90,7 @@ namespace BowieCode {
                 }
 
             }
-
-            // Get the path of the object
-            //			string[] path = property.propertyPath.Split( '.' );
-            //			// Remove itself 
-            //			path = path.Take(path.Count() > 0 ? path.Count() - 1 : 0).ToArray();
-            //
-            //			bool belongsToMonobehaviour = path.Length == 0;
-            //			
-            //			targetObject = property.serializedObject.targetObject;
-            //			
-            //			foreach (string pathNode in path)
-            //			{
-            //				targetObject = targetObject.GetType().GetField(pathNode).GetValue(targetObject);
-            //			}
-            //			
-            //			Debug.LogFormat( "The inspector is for type {0}. My feildInfo" +
-            //			                 "s type is {1}. I found {2}. My Path {3}. I am belong to the monobehavious {4}", 
-            //			                 property.serializedObject.targetObject.GetType(),
-            //			                 fieldInfo.FieldType,
-            //			                 targetObject.GetType(),
-            //			                 property.propertyPath,
-            //			                 belongsToMonobehaviour );
-
-            //			if ( targetObject == null ) {
-            //				
-            //				// Debug.Log( fieldInfo.Name );
-            //
-            //				if ( property.serializedObject.FindProperty( fieldInfo.Name ) != null ) {
-            //					// This attribute refers a property in the monobehaviour 
-            //					Debug.Log( string.Format( "fieldInfo.Name: {0}", fieldInfo.Name ) );
-            //					Debug.Log( string.Format( "Property: {0}",
-            //					                          property.serializedObject.FindProperty( fieldInfo.Name ).serializedObject ) );
-            //
-            //					var editorButtonAttribute = attribute as InspectorButtonAttribute;
-            //					targetObject = property.serializedObject.targetObject;
-            //					methodInfo = targetObject.GetType().GetMethod( editorButtonAttribute.MethodName );
-            //				}
-            //			} else {
-            //				Debug.Log( string.Format( "Couldn't find: {0}", fieldInfo.Name ) );
-            //				// Debug.Log( string.Format( "So: {0}", ) );
-            //			}
-            //
-            //		}
-            //
-            //		//			if ( targetObject == null ) {
-            ////				var editorButtonAttribute = attribute as InspectorButtonAttribute;
-            ////				targetObject = property.serializedObject.targetObject;
-            ////				methodInfo = targetObject.GetType().GetMethod( editorButtonAttribute.MethodName );
-            ////			}
-
+            
         }
     }
 }
