@@ -20,7 +20,7 @@ Personal Code, Snippet & Reference Library for Unity 3D
 - `MouseHider` hides the mouse after a set number of seconds.
 - `PivotGizmo3D` draws customisable axises like the move tool when the object is not selected.
 - `SceneRecorder` frame capture and video creation on OSX using ffmpeg installed by Homebrew.
-- `Singleton` inherit from to make a singleton. _Umm... really not sure about this_.
+- `Singleton` inherit from to make a singleton. _See `DefaultInstance` for a better system_.
 - `Spawner` instantiates prefabs in a random location within a predefined shape. It can set to do this every frame and spawn multiples.
 - `TextGizo` always displays text in the scene view.
 
