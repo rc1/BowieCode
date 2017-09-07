@@ -24,6 +24,13 @@ Personal Code, Snippet & Reference Library for Unity 3D
 - `Spawner` instantiates prefabs in a random location within a predefined shape. It can set to do this every frame and spawn multiples.
 - `TextGizo` always displays text in the scene view.
 
+#### Managers
+
+Managers use the `BowieCode.DefaultInstance<T>` system.
+
+- `DebugNotificationManager` displays short notification labels with a severity level of either info, warning or error. They are displayed indefinitely or for a set timespan, and can be updated once displayed.
+- `MouseManager` will hide the mouse if none are detected or after a set period of time.
+
 
 ### Attributes
 
