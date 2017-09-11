@@ -48,7 +48,7 @@ namespace BowieCode {
 				string name = string.Format( "{0}/frame-{1:D04} shot.png", folder, Time.frameCount );
 
 				// Capture the screenshot to the specified file.
-				ScreenCapture.CaptureScreenshot( name, superSizeFactor );
+				Application.CaptureScreenshot( name, superSizeFactor );
 			}
 		} 
 	}
