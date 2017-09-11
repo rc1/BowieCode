@@ -107,7 +107,7 @@ namespace BowieCode {
         /// </summary>
         private void OnGUI () {
         
-            if ( !disableNotifications) return;
+            if ( disableNotifications ) return;
 
             // Display each message
             _messages.ForEach( message => {
