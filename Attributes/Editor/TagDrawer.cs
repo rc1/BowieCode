@@ -11,7 +11,7 @@ namespace BowieCode {
 			if ( property.propertyType == SerializedPropertyType.String )
 				property.stringValue = EditorGUI.TagField( position, label, property.stringValue );
 			else
-				EditorGUI.LabelField (position, label.text, "Use Tag with string.");
+				EditorGUI.LabelField (position, label.text, "Use TagAttribute with int.");
 		}
 	}
 
