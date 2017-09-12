@@ -8,7 +8,7 @@ Personal Code, Snippet & Reference Library for Unity 3D
 ### Components
 
 - `BindToCamera` will bind it's transform to parent's camera's near or far. Handy for keeping thing to the front or the back of a camera
-- `CameraFulstrumGizmo` alway shows the camera's fulstrum in the scene view. Even when the camera is not selected
+- `CameraFrustumGizmo` alway shows the camera's frustum in the scene view. Even when the camera is not selected
 - `DefaultInstance` Gets/sets a single static `Default` instance. Rather than have singletons, instances can utilize this generic container. For example `DefaultInstance<MyClass>.Set( this )` and `MyClass instance = DefaultInstance<MyClass>.Get()`
 - `DestroyAllChildren` destroys the gameobject's children. Useful for dynamic content. Can be undone when in editor mode
 - `DistributeChildren` distributes it's children between two points. The two points can be manipulated in the scene view

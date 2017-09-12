@@ -5,9 +5,9 @@ namespace BowieCode {
     /// <summary>
     /// Keeps the fulstrum of the camera visible in the scene view.
     /// </summary>
-	[AddComponentMenu("BowieCode/Camera Fulstrum Gizmo")]
+	[AddComponentMenu("BowieCode/Camera Frustum Gizmo")]
     [RequireComponent( typeof( Camera ) )]
-    public class CameraFulstrumGizmo : MonoBehaviour {
+    public class CameraFrustumGizmo : MonoBehaviour {
 
         public Color color = new Color( 1.0f, 1.0f, 0.0f, 1.0f );
 
