@@ -5,12 +5,24 @@ using UnityEngine;
 using BowieCode;
 
 /// <summary>
-/// Hide the mouse after a set time of activity or if the mouse is not connected
+/// App Manager features:
+/// - can hide the mouse automatically,
+/// - can set the app to run in the backgroud
 /// </summary>
-public class MouseManager : MonoBehaviour {
+public class AppManager : MonoBehaviour {
 
-    public bool hideMouse = true;
-    public float afterSeconds = 10f;
+    [Header( "App" )]
+    [SerializeField]
+    [DisableOnPlay]
+    private bool _runInBackground = false;
+    
+    [Header("Mouse")]
+    [SerializeField]
+    [DisableOnPlay]
+    private bool _hidesMouse = true;
+    [SerializeField]
+    [DisableOnPlay]
+    private float _afterSeconds = 10f;
     
     private Vector3 _lastMousePosition;
     private float _lastMouseMoveTime = 0;
@@ -26,19 +38,21 @@ public class MouseManager : MonoBehaviour {
     private MouseState _lastMouseState = MouseState.NotSet;
 
     void Awake () {
-        DefaultInstance<MouseManager>.Set( this );
+        Application.runInBackground = _runInBackground;
+        DefaultInstance<AppManager>.Set( this );
     }
 
     void Start() {
         // Hide the mouse if it does not exist
-        if ( !Input.mousePresent ) {
+        if ( !Input.mousePresent && _hidesMouse ) {
             SetMouseVisibleState( false );
         }
     }
 
     void Update () {
-
-        if ( !Input.mousePresent ) {
+        
+       
+        if ( !Input.mousePresent || !_hidesMouse ) {
             return;
         }
         
@@ -48,7 +62,7 @@ public class MouseManager : MonoBehaviour {
 
         _lastMousePosition = Input.mousePosition;
 
-        SetMouseVisibleState( Time.fixedTime - _lastMouseMoveTime < afterSeconds );
+        SetMouseVisibleState( Time.fixedTime - _lastMouseMoveTime < _afterSeconds );
 
     }
 
