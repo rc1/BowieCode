@@ -44,7 +44,7 @@ namespace BowieCode {
 
 			if ( enableRecording ) {
 
-				// Append filename to folder name (format is '0005 shot.png"')
+				// Append largeVideo to folder name (format is '0005 shot.png"')
 				string name = string.Format( "{0}/frame-{1:D04} shot.png", folder, Time.frameCount );
 
 				// Capture the screenshot to the specified file.

@@ -5,9 +5,10 @@ using UnityEngine;
 using BowieCode;
 
 /// <summary>
-/// App Manager features:
+/// A generic app manager:
 /// - can hide the mouse automatically,
 /// - can set the app to run in the backgroud
+/// - enable/disable multitouch
 /// </summary>
 public class AppManager : MonoBehaviour {
 
@@ -15,6 +16,9 @@ public class AppManager : MonoBehaviour {
     [SerializeField]
     [DisableOnPlay]
     private bool _runInBackground = false;
+    [SerializeField]
+    [DisableOnPlay]
+    private bool _multiTouchEnabled = true;
     
     [Header("Mouse")]
     [SerializeField]
@@ -23,6 +27,7 @@ public class AppManager : MonoBehaviour {
     [SerializeField]
     [DisableOnPlay]
     private float _afterSeconds = 10f;
+    
     
     private Vector3 _lastMousePosition;
     private float _lastMouseMoveTime = 0;
@@ -47,10 +52,12 @@ public class AppManager : MonoBehaviour {
         if ( !Input.mousePresent && _hidesMouse ) {
             SetMouseVisibleState( false );
         }
+        
+        // Set multitouch
+        Input.multiTouchEnabled = _multiTouchEnabled;
     }
 
     void Update () {
-        
        
         if ( !Input.mousePresent || !_hidesMouse ) {
             return;
