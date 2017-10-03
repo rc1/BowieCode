@@ -5,6 +5,8 @@ using UnityEditor;
 using System.Diagnostics;
 
 namespace BowieCode {
+	#if UNITY_EDITOR_OSX
+	
 	[AddComponentMenu("Wandering Medow/Utils/Screen Recorder")]
 	[CustomEditor(typeof(SceneRecorder))]
 	public class SceneRecorderEditor : Editor {
@@ -84,4 +86,6 @@ namespace BowieCode {
 			}
 		}
 	}
+	
+	#endif
 }

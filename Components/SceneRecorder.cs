@@ -4,9 +4,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace BowieCode {
+	
+	#if UNITY_EDITOR_OSX
 
 	[ExecuteInEditMode]
 	public class SceneRecorder : MonoBehaviour {
+		
 		// The folder to contain our screenshots.
 		// If the folder exists we will append numbers to create an empty folder.
 		public string folder = "";
@@ -52,5 +55,7 @@ namespace BowieCode {
 			}
 		} 
 	}
+	
+	#endif
 
 }
