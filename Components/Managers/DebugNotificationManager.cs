@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -63,14 +63,12 @@ namespace BowieCode {
             _messages.Add( message );
 
             // Remove it after the duration
-            if ( message.keepForSeconds > 0.0f ) {
-                Observable
-                    .Interval( TimeSpan.FromSeconds( message.keepForSeconds ) )
-                    .Subscribe( _ => {
-                        Remove( message );
-                    } )
-                    .AddTo( this );
-            }
+            StartCoroutine( RemoveLater( message ) );
+        }
+
+        private IEnumerator RemoveLater ( Message message ) {
+            yield return new WaitForSeconds( message.keepForSeconds );
+            Remove( message );
         }
 
         /// <summary>
