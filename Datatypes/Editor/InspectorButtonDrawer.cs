@@ -23,7 +23,7 @@ namespace BowieCode {
 
             if ( methodInfo == null ) {
                 EditorGUI.HelpBox( position,
-                                   string.Format( "InspectorButton: Public method '{0}' not found",
+                                   string.Format( "InspectorButton: method '{0}' not found",
                                                   editorButtonAttribute.MethodName ), MessageType.Warning );
                 return;
             }
@@ -86,7 +86,8 @@ namespace BowieCode {
                 // Get the method info
                 var editorButtonAttribute = attribute as InspectorButtonAttribute;
                 if ( editorButtonAttribute != null ) {
-                    methodInfo = targetObject.GetType().GetMethod( editorButtonAttribute.MethodName );
+                    var searchTerms = BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Static | BindingFlags.Instance;
+                    methodInfo = targetObject.GetType().GetMethod( editorButtonAttribute.MethodName, searchTerms );
                 }
 
             }
