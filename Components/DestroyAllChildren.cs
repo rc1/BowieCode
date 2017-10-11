@@ -1,10 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using BowieCode;
+﻿using UnityEngine;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
+using BowieCode;
 
 /// <summary>
 /// Destroies all the gameobject's children. Useful for dynamic content. Can be undone in editor mode.
@@ -12,8 +10,8 @@ using UnityEditor;
 [AddComponentMenu("BowieCode/Destroy All Children")]
 public class DestroyAllChildren : MonoBehaviour {
 
-	[InspectorButton(MethodName="DoDestructionOfChildren",ButtonText="Destroy All Children")]
-	public InspectorButton destroyChildrenButton;
+	[BowieCode.InspectorButton(MethodName="DoDestructionOfChildren",ButtonText="Destroy All Children")]
+	public BowieCode.InspectorButton destroyChildrenButton;
 
 	public void DoDestructionOfChildren () {
 		var idx = transform.childCount;
