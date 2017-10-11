@@ -45,13 +45,15 @@ Managers use the `BowieCode.DefaultInstance<T>` system.
 ### Datatypes
 
 - `Cycle` wraps a `Enumerable` into a container with a `Next` method.
+
 - `InspectorButton` creates a button in the inspector when paired with an `InspectorButtonAttribute`. See: [InspectorButtonExample](https://github.com/rc1/BowieCode/blob/master/Examples/InspectorExample.cs).
+    - ![example button](https://user-images.githubusercontent.com/166915/31450955-b79b4d52-aea2-11e7-8f16-b95e99605089.gif)
 - `ParentingMode` helps define where instanced GameObject should be placed.
 - `ShapedRange` evaluates to a constant value, a value between two numbers or a value from an Animation curve. These options can be selected in the editor. It's inspired by Unity's particle system.
 
 ### Utils
 
-- `BitmaskHelper` provides `IsSet`, `Set`, `Unset` enum helper.
+- `BitmaskHelper` provides `IsSet`, `Set`, `Unset` for enums which use the `[Flags]` attribute.
 - `BowieMath` includes:
 	- `CompareVectors` compares if Vector are close to equal,
 	- `MapIntervalF` maps an input float from one range to another,
