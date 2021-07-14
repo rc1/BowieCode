@@ -39,13 +39,13 @@ namespace BowieCode {
 			}
 
 			Handles.color = useDefaultColor ? ApplyAlpha( Handles.xAxisColor, alpha ) : color;
-			Handles.ArrowCap( 0, _transform.transform.position, _transform.transform.rotation * Quaternion.Euler( 0, 90, 0 ), arrowSize );
+			Handles.ArrowHandleCap( 0, _transform.transform.position, _transform.transform.rotation * Quaternion.Euler( 0, 90, 0 ), arrowSize,  EventType.Layout );
 
 			Handles.color = useDefaultColor ? ApplyAlpha( Handles.yAxisColor, alpha ) : color;
-			Handles.ArrowCap( 0, _transform.transform.position, _transform.transform.rotation * Quaternion.Euler( -90, 0, 0 ), arrowSize );
+			Handles.ArrowHandleCap( 0, _transform.transform.position, _transform.transform.rotation * Quaternion.Euler( -90, 0, 0 ), arrowSize,  EventType.Layout );
 
 			Handles.color = useDefaultColor ? ApplyAlpha( Handles.zAxisColor, alpha ) : color;
-			Handles.ArrowCap( 0, _transform.transform.position, _transform.transform.rotation, arrowSize );
+			Handles.ArrowHandleCap( 0, _transform.transform.position, _transform.transform.rotation, arrowSize, EventType.Layout );
 		}
 #endif
 

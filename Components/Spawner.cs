@@ -156,7 +156,7 @@ namespace BowieCode {
 		void DrawCircularGizmo () {
 #if UNITY_EDITOR
 			Handles.color = Color.cyan;
-			Handles.CircleCap( 0, transform.position, transform.rotation * Quaternion.Euler( 90.0f, 0.0f, 0.0f ), size / 2.0f );
+			Handles.CircleHandleCap( 0, transform.position, transform.rotation * Quaternion.Euler( 90.0f, 0.0f, 0.0f ), size / 2.0f, EventType.Layout );
 #endif
 		}
 			
@@ -169,9 +169,9 @@ namespace BowieCode {
 		void DrawSphereGizmo () {
 #if UNITY_EDITOR
 			Handles.color = Color.cyan;
-			Handles.CircleCap( 0, transform.position, transform.rotation * Quaternion.Euler( 90.0f, 0.0f, 0.0f ), size / 2.0f );
-			Handles.CircleCap( 0, transform.position, transform.rotation * Quaternion.Euler( 0.0f, 0.0f, 0.0f ), size / 2.0f );
-			Handles.CircleCap( 0, transform.position, transform.rotation * Quaternion.Euler( 0.0f, 90.0f, 0.0f ), size / 2.0f );
+			Handles.CircleHandleCap( 0, transform.position, transform.rotation * Quaternion.Euler( 90.0f, 0.0f, 0.0f ), size / 2.0f, EventType.Layout );
+			Handles.CircleHandleCap( 0, transform.position, transform.rotation * Quaternion.Euler( 0.0f, 0.0f, 0.0f ), size / 2.0f, EventType.Layout );
+			Handles.CircleHandleCap( 0, transform.position, transform.rotation * Quaternion.Euler( 0.0f, 90.0f, 0.0f ), size / 2.0f, EventType.Layout );
 #endif
 		}
 
@@ -182,7 +182,7 @@ namespace BowieCode {
 		void DrawSquareGizmo () {
 #if UNITY_EDITOR
 			Handles.color = Color.cyan;
-			Handles.RectangleCap( 0, transform.position, transform.rotation * Quaternion.Euler( 90.0f, 0.0f, 0.0f ), size / 2.0f );
+			Handles.RectangleHandleCap( 0, transform.position, transform.rotation * Quaternion.Euler( 90.0f, 0.0f, 0.0f ), size / 2.0f, EventType.Layout );
 #endif
 		}
 			
